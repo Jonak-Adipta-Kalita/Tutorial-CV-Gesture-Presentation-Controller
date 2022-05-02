@@ -1,10 +1,10 @@
-from cvzone.HandTrackingModule import HandDetector
+from HandTrackingModule import HandDetector
 import cv2
 import os
 import numpy as np
 
 # Parameters
-width, height = 1280, 720
+width, height = 1280, 768
 gestureThreshold = 300
 folderPath = "Presentation"
 
@@ -114,8 +114,7 @@ while True:
     h, w, _ = imgCurrent.shape
     imgCurrent[0:hs, w - ws: w] = imgSmall
 
-    cv2.imshow("Slides", imgCurrent)
-    cv2.imshow("Image", img)
+    cv2.imshow("JAK Gesture Controlled Presentation Prog", imgCurrent)
 
     key = cv2.waitKey(1)
     if key == ord('q'):
